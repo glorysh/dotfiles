@@ -1,5 +1,7 @@
 let mapleader=" "
 syntax on
+syntax enable
+"colorscheme darcula
 
 set ts=4
 set expandtab
@@ -35,8 +37,8 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set list
-set listchars=tab:▸\ ,trail:▫
+"set list
+"set listchars=tab:▸\ ,trail:▫
 set scrolloff=5
 set tw=0
 set indentexpr=
@@ -46,6 +48,7 @@ set foldlevel=99
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
 set laststatus=2
 set autochdir
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -78,14 +81,14 @@ map tr :+tabnext<CR>
 map sv <C-w>t<C-w>H
 map sh <C-w>t<C-w>K
 
-call plug#begin('~/.vim/plugged')
+"call plug#begin('~/.vim/plugged')
 
-Plug 'vim-airline/vim-airline'
-Plug 'connorholyday/vim-snazzy'
+"Plug 'vim-airline/vim-airline'
+"Plug 'connorholyday/vim-snazzy'
 
 " File navigation
 " Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'preservim/nerdtree'
+"Plug 'preservim/nerdtree'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Taglist
@@ -142,22 +145,22 @@ Plug 'preservim/nerdtree'
 " Plug 'kana/vim-textobj-user'
 " Plug 'fadein/vim-FIGlet'
 
-call plug#end()
+"call plug#end()
 
 " ===
 " === NERDTree
 " ===
-map tt :NERDTreeToggle<CR>
-let NERDTreeMapOpenExpl = ""
-let NERDTreeMapUpdir = ""
-let NERDTreeMapUpdirKeepOpen = "l"
-let NERDTreeMapOpenSplit = ""
-let NERDTreeOpenVSplit = ""
-let NERDTreeMapActivateNode = "i"
-let NERDTreeMapOpenInTab = "o"
-let NERDTreeMapPreview = ""
-let NERDTreeMapCloseDir = "n"
-let NERDTreeMapChangeRoot = "y"
+"map tt :NERDTreeToggle<CR>
+"let NERDTreeMapOpenExpl = ""
+"let NERDTreeMapUpdir = ""
+"let NERDTreeMapUpdirKeepOpen = "l"
+"let NERDTreeMapOpenSplit = ""
+"let NERDTreeOpenVSplit = ""
+"let NERDTreeMapActivateNode = "i"
+"let NERDTreeMapOpenInTab = "o"
+"let NERDTreeMapPreview = ""
+"let NERDTreeMapCloseDir = "n"
+"let NERDTreeMapChangeRoot = "y"
 
 " ===
 " === MarkdownPreview
@@ -172,14 +175,14 @@ let NERDTreeMapChangeRoot = "y"
 " let g:mkdp_echo_preview_url = 0
 " let g:mkdp_browserfunc = ''
 " let g:mkdp_preview_options = {
-    " \ 'mkit': {},
-    " \ 'katex': {},
-    " \ 'uml': {},
-    " \ 'maid': {},
-    " \ 'disable_sync_scroll': 0,
-    " \ 'sync_scroll_type': 'middle',
-    " \ 'hide_yaml_meta': 1
-    " \ }
+ " \ 'mkit': {},
+ " \ 'katex': {},
+ " \ 'uml': {},
+ " \ 'maid': {},
+ " \ 'disable_sync_scroll': 0,
+ " \ 'sync_scroll_type': 'middle',
+ " \ 'hide_yaml_meta': 1
+ " \ }
 " let g:mkdp_markdown_css = ''
 " let g:mkdp_highlight_css = ''
 " let g:mkdp_port = ''
